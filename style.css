@@ -1,0 +1,94 @@
+:root {
+    /* colors */
+    --clr-blue-200: hsl(225, 100%, 94%);
+    --clr-blue-400: hsl(245, 75%, 52%);
+
+    --clr-blue-100: hsl(225, 100%, 98%);
+    --clr-blue-500: hsl(224, 23%, 55%);
+    --clr-blue-800: hsl(223, 47%, 23%);
+
+    --clr-white-100: hsl(0, 0%, 100%);
+
+    /* components */
+    --clr-body-bg: var(--clr-blue-200);
+    --clr-card-bg: var(--clr-white-100);
+    --clr-card-accent: var(--clr-blue-100);
+    --clr-card-btn: var(--clr-blue-400);
+
+    --clr-text-primary: var(--clr-blue-500);
+    --clr-heading-primary: var(--clr-blue-800);
+
+    /* font size */
+    --fs-400: 1rem;
+
+    /* font weight */
+    --fw-regular: 500;
+    --fw-semi-bold: 700;
+    --fw-bold: 900;
+
+}
+
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* general styles */
+
+body {
+    background-color: var(--clr-body-bg);
+    color: var(--clr-text-primary);
+    font-family: 'Red Hat Display', sans-serif;
+    font-size: var(--fs-400);
+    font-weight: var(--fw-regular);
+}
