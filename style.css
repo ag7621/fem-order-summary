@@ -2,6 +2,7 @@
     /* colors */
     --clr-blue-200: hsl(225, 100%, 94%);
     --clr-blue-400: hsl(245, 75%, 52%);
+    --clr-blue-400a: hsla(245, 75%, 52%, 0.75);
 
     --clr-blue-100: hsl(225, 100%, 98%);
     --clr-blue-500: hsl(224, 23%, 55%);
@@ -19,7 +20,9 @@
     --clr-heading-primary: var(--clr-blue-800);
 
     /* font size */
+    --fs-300: 0.875rem;
     --fs-400: 1rem;
+    --fs-700: 1.75rem;
 
     /* font weight */
     --fw-regular: 500;
@@ -83,7 +86,7 @@ h6 {
     isolation: isolate;
 }
 
-/* general styles */
+/* styling */
 
 body {
     background-color: var(--clr-body-bg);
@@ -91,4 +94,75 @@ body {
     font-family: 'Red Hat Display', sans-serif;
     font-size: var(--fs-400);
     font-weight: var(--fw-regular);
+    line-height: 1.6;
+    text-align: center;
+
+    display: grid;
+    place-content: center;
+}
+
+.card {
+    /* background-color: var(--clr-card-bg); */
+    max-width: 28.125rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    /* margin: 0 1.5rem; */
+}
+
+.card__content {
+    display: grid;
+    background-color: var(--clr-card-bg);
+    padding: 2.625rem 3rem;
+}
+
+.card__content>*+* {
+    margin-top: 0.875rem;
+}
+
+.card__title {
+    color: var(--clr-heading-primary);
+    font-size: var(--fs-700);
+    font-weight: var(--fw-bold);
+}
+
+.plan {
+    display: flex;
+    background-color: var(--clr-card-accent);
+    gap: 1rem;
+    padding: 1.5rem;
+    text-align: start;
+}
+
+.plan__details>p:first-child {
+    color: var(--clr-heading-primary);
+    font-weight: var(--fw-bold);
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    border-radius: 0.5rem;
+    font-weight: var(--fw-semi-bold);
+    padding: 0.75em 2em;
+    text-decoration: none;
+}
+
+.btn-submit {
+    color: var(--clr-white-100);
+    background-color: var(--clr-card-btn);
+}
+
+.btn-submit:hover,
+.btn-submit:focus {
+    background-color: var(--clr-blue-400a);
+}
+
+.btn-cancel {
+    color: var(--clr-text-primary);
+}
+
+.btn-cancel:hover,
+.btn-cancel:focus {
+    color: var(--clr-heading-primary);
 }
